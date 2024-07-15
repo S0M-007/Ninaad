@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="LogInd1.css">
+  <title>Log In</title>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="../NINAAD/BMS.png">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/Contact.html">Contact</a></li>
+                <li><a href="pages/About.html">About</a></li>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="pages/Upcoming.html">Upcoming Events</a></li>
+                <li><a href="LogInd.html">Log In</a></li>
+            </ul>
+    </header>
+    <div class="left-section">
+        <div id="left-cover" >
+            <h1>Welcome !</h1>
+            <h3>Already have an account ?</h3>
+        </div>
+        <div id="left-form" >
+            <h1>Login</h1>
+            <form action="login.php" method="post">
+                <input type="text" name="user-name" class="input-box" placeholder="User Name"><br>
+                <input type="password" name="user-pass" class="input-box" placeholder="Password"><br>
+                <input type="submit" name="login-btn" class="btn" value="Login" >
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="right-section">
+        <div id="right-cover" >
+            <h3>Don't have an account ?</h3>
+        </div>
+        <div id="right-form" class="form form-hide">
+            <h1>Signup</h1>
+            <form action="signup.php" method="post">
+                <input type="text" name="user-name" class="input-box" placeholder="User Name"><br>
+                <input type="email" name="user-email" class="input-box" placeholder="Email"><br>
+                <input type="password" name="user-pass" class="input-box" placeholder="Password"><br>
+                <input type="submit" name="signup-btn" class="btn" value="Signup">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

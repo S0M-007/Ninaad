@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+    
+
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="../NINAAD/BMS.png">
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/Contact.html">Contact</a></li>
+            <li><a href="pages/About.html">About</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/Upcoming.html">Upcoming Events</a></li>
+            <li><a href="LogInd.html">Log In</a></li>
+        </ul>
+</header>
+
+<body>
+
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="" name="form1">
+                    <h2>Sign Up</h2>
+                    <div class="inputbox">
+                        <input type="name" name="name" id="name" required>
+                        <label for="">Name</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <ion-icon name="call"></ion-icon>
+                        <input type="tel" name="Phone" id="Phone" required>
+                        <label for="">Phone</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" id="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="cpassword" id="cpassword" required>
+                        <label>Confirm Password</label>
+                    </div>
+
+                    <button onclick="vali()">Sign Up</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        function vali() {
+            var name = document.getElementById("name").value;
+
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("Phone").value;
+            var password = document.getElementById("password").value;
+            var cpassword = document.getElementById("cpassword").value;
+            var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+            var regPhone = /^\d{10}$/;
+            var regName = /\d+$/g;
+
+
+            if (name == "") {
+                window.alert("Please enter your name.");
+                name.focus();
+                return false;
+            }
+
+
+            else if (phone == "" || !regPhone.test(phone)) {
+                alert("Please enter valid phone number.");
+                phone.focus();
+                return false;
+            }
+
+            else if (email == "" || !regEmail.test(email)) {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+
+
+            else if (password == "") {
+                alert("Please enter your password");
+                password.focus();
+                return false;
+            }
+
+            else if (password.length < 8) {
+                alert("Password should be atleast 8 character long");
+                password.focus();
+                return false;
+
+            }
+
+
+            else if (cpassword == "") {
+                alert("Please enter your password again");
+                cpassword.focus();
+                return false;
+            }
+
+            else if (password != cpassword) {
+                alert("The passwords do not match");
+                return false;
+            }
+            else {
+                window.location.assign("LogInd.html");
+                alert("Submitted Successfully!");
+
+                auth1();
+                return true;
+            }
+            var xyz = vali();
+
+
+            function auth1() {
+                // alert("hey!");
+                // var emaill = document.getElementById("EMAIL").value;
+                if (xyz == true) {
+                    alert("Submitted Successfully!");
+                    window.location.assign("logInd.html");
+                }
+            }
+        }
+    </script>
+</body>
+    
+</html>

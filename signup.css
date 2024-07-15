@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+
+
+
+
+body {
+    background-image: linear-gradient( rgba(255,154,48,1) 20%, rgb(255,255,255) 65%, rgba(10,137,1,1) 100%);
+    background-repeat: no-repeat;
+    height: 1000px;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+}
+
+.logo img {
+    height: 150px;
+    width: auto;
+    float: left;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+ul {
+    list-style-type: none;
+    float: right;
+    margin-top: 75px;
+}
+
+li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    border: 1px transparent;
+    transition: 0.5s ease-in-out;
+} 
+
+ ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    width: 100%;
+    background: url('NINAAD/Untitled-1.png')no-repeat;
+    background-position: center;
+    background-size:contain;
+}
+    /* 
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("NINAAD/Untitled-1.png");
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    width: auto;
+    height: 200vh;
+    position: relative;
+} */
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background: transparent;
+    border: 2px solid rgb(2, 54, 245);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+h2{
+    font-size: 2em;
+    color: #f9f9f9;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-color: rgb(4, 95, 251);
+    opacity: 70%;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #000000;
+    font-size: 20px;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -10px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #000000;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #090808;
+    font-size: 30px;
+    top: 10px;
+}
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.forget label input{
+    margin-right: 3px;
+}
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background: #a7a9f1a5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    opacity: 70%;
+}
+
